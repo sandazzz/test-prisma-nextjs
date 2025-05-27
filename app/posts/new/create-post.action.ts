@@ -24,6 +24,7 @@ export const createPost = action
 
       revalidatePath("/posts");
     } catch (error) {
+      console.error("Erreur lors de la création du post:", error);
       return { error: "Une erreur est survenue lors de la création du post" };
     }
   });
